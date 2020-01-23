@@ -11,5 +11,6 @@ DebugUnicode
 bin
 bin/ofMaker
 lib
+Makefile
 *.mk
 *.workspace.session
