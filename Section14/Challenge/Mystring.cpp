@@ -90,3 +90,84 @@ std::istream &operator>>(std::istream &in, Mystring &rhs) {
     return in;
 }
 
+// overloaded equality operator
+bool Mystring::operator==(const Mystring &rhs) const
+{
+    return (std::strcmp(str, rhs.str) == 0);
+}
+
+// overloaded inequality operator
+bool Mystring::operator!=(const Mystring &rhs) const
+{
+    return !(std::strcmp(str, rhs.str) == 0);
+}
+
+// overloaded less-than operator
+bool Mystring::operator<(const Mystring &rhs) const
+{
+    return (std::strcmp(str, rhs.str) < 0);
+}
+
+// overloaded greater-than operator
+bool Mystring::operator>(const Mystring &rhs) const
+{
+    return (std::strcmp(str, rhs.str) > 0);
+}
+
+// make lowercase
+Mystring Mystring::operator-() const
+{
+    char* buff = new char[std::strlen(str) + 1];
+    std::strcpy(buff, str);
+    for (size_t i{}; i < std::strlen(buff); ++i)
+        buff[i] = std::tolower(buff[i]);
+    Mystring temp {buff};
+    delete [] buff;
+    return temp;
+}
+
+Mystring Mystring::operator+(const Mystring &rhs) const
+{
+    char* buff = new char[std::strlen(str) + std::strlen(rhs.str) + 1];
+    std::strcpy(buff, str);
+    std::strcat(buff, rhs.str);
+    Mystring temp {buff};
+    delete [] buff;
+    return temp;
+}
+
+Mystring &Mystring::operator+=(const Mystring &rhs)
+{
+    *this = *this + rhs;
+    return *this;
+}
+
+Mystring Mystring::operator*(int n) const
+{
+    Mystring temp;
+    for (size_t i{1}; i <= n; ++i)
+        temp = temp + *this;
+    return temp;
+}
+
+Mystring &Mystring::operator *=(int n)
+{
+    *this = *this * n;
+    return *this;
+}
+
+Mystring &Mystring::operator++()
+{
+    for (size_t i{}; i < std::strlen(str); ++i)
+    {
+        str[i] = std::toupper(str[i]);
+    }
+    return *this;
+}
+
+Mystring Mystring::operator++(int)
+{
+    Mystring temp(*this);
+    operator++();
+    return temp;
+}
