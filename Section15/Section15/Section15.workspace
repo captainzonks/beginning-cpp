@@ -2,19 +2,22 @@
 <CodeLite_Workspace Name="Section15" Database="" Version="10000">
   <Project Name="DerivingOurFirstClass" Path="DerivingOurFirstClass/DerivingOurFirstClass.project" Active="No"/>
   <Project Name="ProtectedMemberClassAccess" Path="ProtectedMemberClassAccess/ProtectedMemberClassAccess.project" Active="No"/>
-  <Project Name="ConstructorsAndDestructors" Path="ConstructorsAndDestructors/ConstructorsAndDestructors.project" Active="Yes"/>
+  <Project Name="ConstructorsAndDestructors" Path="ConstructorsAndDestructors/ConstructorsAndDestructors.project" Active="No"/>
+  <Project Name="BaseClassInitialization" Path="BaseClassInitialization/BaseClassInitialization.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="DerivingOurFirstClass" ConfigName="Debug"/>
       <Project Name="ProtectedMemberClassAccess" ConfigName="Debug"/>
       <Project Name="ConstructorsAndDestructors" ConfigName="Debug"/>
+      <Project Name="BaseClassInitialization" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="DerivingOurFirstClass" ConfigName="Release"/>
       <Project Name="ProtectedMemberClassAccess" ConfigName="Release"/>
       <Project Name="ConstructorsAndDestructors" ConfigName="Release"/>
+      <Project Name="BaseClassInitialization" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
